@@ -15,7 +15,7 @@ function toVideo(doc: { _id: ObjectId; title?: string; thumb?: string; watchLate
 
 export async function findAll(): Promise<YoutubeRssVideo[]> {
   const database = await getDb();
-  const cursor = database.collection(COLLECTION).find({});
+  const cursor = database.collection(COLLECTION).find({}).sort({ _id: -1 });
   const docs = await cursor.toArray();
   return docs.map(toVideo);
 }
