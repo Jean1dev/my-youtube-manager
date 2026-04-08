@@ -30,6 +30,11 @@ export function VideoCard({ video, onWatchLaterChange }: VideoCardProps) {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-3 p-3 sm:p-4">
+        {video.channelName && (
+          <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400 truncate">
+            {video.channelName}
+          </p>
+        )}
         <h2 className="line-clamp-2 min-h-[2.5em] text-sm font-medium leading-snug text-zinc-900 dark:text-zinc-100 sm:text-base">
           {video.title || "Sem título"}
         </h2>
