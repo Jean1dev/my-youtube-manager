@@ -9,4 +9,5 @@ export interface YoutubeRssVideo {
 export interface ChannelRanking {
   channelName: string;
   count: number;
+  ignoredUntil?: string | null;
 }
