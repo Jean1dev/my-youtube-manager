@@ -4,6 +4,7 @@ export interface YoutubeRssVideo {
   thumb: string;
   channelName?: string;
   watchLater?: boolean;
+  createdAt: string;
 }
 
 export interface ChannelRanking {

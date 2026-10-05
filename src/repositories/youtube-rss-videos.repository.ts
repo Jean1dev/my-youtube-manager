@@ -13,6 +13,7 @@ function toVideo(doc: { _id: ObjectId; title?: string; thumb?: string; channelNa
     thumb: doc.thumb ?? "",
     channelName: doc.channelName ?? "",
     watchLater: doc.watchLater ?? false,
+    createdAt: doc._id.getTimestamp().toISOString(),
   };
 }
 
